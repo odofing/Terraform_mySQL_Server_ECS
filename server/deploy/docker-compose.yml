@@ -7,7 +7,7 @@ services:
       - .:/infra
     working_dir: /infra
     environment:
-      - access_key = ${ACCESS_KEY}
-      - secret_key = ${SECRET_KEY}
-      - region = ${AWS_REGION}
+      - AWS_ACCESS_KEY_ID=${ACCESS_KEY}
+      - AWS_SECRET_ACCESS_KEY=${SECRET_ACCESS_KEY}
+
 

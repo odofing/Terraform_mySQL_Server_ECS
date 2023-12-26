@@ -8,11 +8,6 @@ terraform {
   }
 }
 
-# provider "aws" {
-#  # shared_credentials_file = "C:\Users/odofi/.aws/credentials"
-#   profile = "terraform-access"
-#     access_key = "${ACCESS_KEY}"
-#     secret_key = "${SECRET_KEY}"
-#     region = "${AWS_REGION}"
-#   version = "~> 2.54.0"
-# }
+locals {
+  prefix = "${var.prefix}-${terraform.workspace}"
+}

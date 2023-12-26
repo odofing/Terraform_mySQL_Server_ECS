@@ -1,20 +1,18 @@
 import mysql from "mysql2"
 
 // export const db = mysql.createConnection({
-//   host: "localhost",
-//   user: "root",
-//   password: 'password',
-//   database: "blog"
+// host: process.env.HOST_LOCAL,
+//  user: process.env.USER_LOCAL,
+//password: process.env.PASSWORD,
+// database: process.env.DATABASE  
 // })
 export const db = mysql.createConnection({
-  //host: "blog.csmththc5dxj.eu-west-1.rds.amazonaws.com",
-  host: process.env.host,
-  user: process.env.user,
-  //user: "admin",
-  //port: process.env.SQLPORT,
-  port: 3306,
-  password: 'password',
-  database: "blog"
+
+  host: process.env.HOST,
+  user: process.env.USER,
+  port: process.env.SQLPORT,
+  password: process.env.PASSWORD,
+  database: process.env.DATABASE
 })
 
 db.connect((err) => {

@@ -29,7 +29,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 app.get("/", (req, res) => {
-  res.json("testing-from mysql");
+  res.status(200).json("testing-from mysql");
 });
 
 

@@ -37,27 +37,27 @@ phases:
       
       - docker push ${REPO_URI}:${IMAGE_TAG}
       
-      # - sed -i 's@REPO_URI@'$REPO_URI'@g' taskdef.json
+      - sed -i 's@REPO_URI@'$REPO_URI'@g' taskdef.json
       
-      # - sed -i 's@IMAGE_TAG@'$IMAGE_TAG'@g' taskdef.json
+      - sed -i 's@IMAGE_TAG@'$IMAGE_TAG'@g' taskdef.json
       
-      # - echo update the REGION in task definition...
+      - echo update the REGION in task definition...
       
-      # - sed -i 's@AWS_REGION@'$AWS_REGION'@g' taskdef.json
+      - sed -i 's@AWS_REGION@'$AWS_REGION'@g' taskdef.json
       
-      # - echo update the roles in task definition...
+      - echo update the roles in task definition...
       
-      # - sed -i 's@TASK_EXECUTION_ARN@'$TASK_EXECUTION_ARN'@g' taskdef.json
+      - sed -i 's@TASK_EXECUTION_ARN@'$TASK_EXECUTION_ARN'@g' taskdef.json
       
-     # - printf '{"ImageURI":"%s"}' ${REPO_URI}:${IMAGE_TAG} > imageDetail.json 
+      - printf '{"ImageURI":"%s"}' ${REPO_URI}:${IMAGE_TAG} > imageDetail.json 
       
         # Generate image definitions file for ECS
-      - printf '[{"name":"mysqlserver","imageUri":"%s"}]' ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com > imagedefinitions.json
+      - printf '[{"name":"blogserver","imageUri":"%s"}]' ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com > imagedefinitions.json
       
       
 artifacts:
   files:
-   # - "appspec.yaml"
-   # - "taskdef.json"
-   # - "imageDetail.json"
-    - imagedefinitions.json
+   - "appspec.yaml"
+   - "taskdef.json"
+   - "imageDetail.json"
+   - imagedefinitions.json

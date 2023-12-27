@@ -5,7 +5,7 @@ resource "aws_vpc" "main" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-vpc"})
+    tomap({ "Name" = "${local.prefix}-vpc" })
   )
 }
 
@@ -14,7 +14,7 @@ resource "aws_internet_gateway" "main" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-main"})
+    tomap({ "Name" = "${local.prefix}-main" })
   )
 }
 
@@ -26,7 +26,7 @@ resource "aws_subnet" "public_a" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-public-a"})
+    tomap({ "Name" = "${local.prefix}-public-a" })
   )
 }
 
@@ -35,7 +35,7 @@ resource "aws_route_table" "public_a" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-public-rtb-a"})
+    tomap({ "Name" = "${local.prefix}-public-rtb-a" })
   )
 }
 
@@ -55,7 +55,7 @@ resource "aws_eip" "public_a" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-public-a"})
+    tomap({ "Name" = "${local.prefix}-public-a" })
   )
 }
 
@@ -65,7 +65,7 @@ resource "aws_nat_gateway" "public_a" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-public-a"})
+    tomap({ "Name" = "${local.prefix}-public-a" })
   )
 }
 
@@ -77,7 +77,7 @@ resource "aws_subnet" "public_b" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-public-b"})
+    tomap({ "Name" = "${local.prefix}-public-b" })
   )
 }
 
@@ -86,7 +86,7 @@ resource "aws_route_table" "public_b" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-public-rtb-b"})
+    tomap({ "Name" = "${local.prefix}-public-rtb-b" })
   )
 }
 
@@ -106,7 +106,7 @@ resource "aws_eip" "public_b" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-public-b"})
+    tomap({ "Name" = "${local.prefix}-public-b" })
   )
 }
 
@@ -116,7 +116,7 @@ resource "aws_nat_gateway" "public_b" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-public-b"})
+    tomap({ "Name" = "${local.prefix}-public-b" })
   )
 }
 
@@ -130,7 +130,7 @@ resource "aws_subnet" "private_a" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-private-a"})
+    tomap({ "Name" = "${local.prefix}-private-a" })
   )
 }
 
@@ -139,7 +139,7 @@ resource "aws_route_table" "private_a" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-private-rtb-a"})
+    tomap({ "Name" = "${local.prefix}-private-rtb-a" })
   )
 }
 
@@ -161,7 +161,7 @@ resource "aws_subnet" "private_b" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-private-b"})
+    tomap({ "Name" = "${local.prefix}-private-b" })
   )
 }
 
@@ -170,7 +170,7 @@ resource "aws_route_table" "private_b" {
 
   tags = merge(
     local.common_tags,
-    tomap({"Name" = "${local.prefix}-private--rtb-b"})
+    tomap({ "Name" = "${local.prefix}-private--rtb-b" })
   )
 }
 
